@@ -1,4 +1,6 @@
+## Pseusdocode
 
+```
 function calculateWage(number of hours worked, base hourly wage, overtime hourly wage):
     SET the initial result to 0
     IF the number of hours worked is greater than 40 THEN
@@ -18,3 +20,8 @@ function main():
     CALL the calculateWage function, passing in the number of hours worked, base hourly wage, and overtime hourly wage
     GET the weekly wages result from the calculateWage function
     PRINT the result
+```
+
+## Flowchart
+
+![Flow Chart](WeeklyWageFlowchart.jpeg)
