@@ -7,41 +7,49 @@ Example: If an employee works 60 hours in a week, they would earn $20/hr for the
 ## Pseusdocode
 
 ```
-function validateInput(number of hours worked, base hourly wage, overtime hourly wage):
-    IF any of the inputs are invalid THEN
-        RETURN FALSE and an error message indicating the invalid input
-    ELSE
-        RETURN TRUE and a message indicating success
+function validateInput(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage):
+    SET message variable to a string indicating success
+    SET is_valid variable to TRUE
+    IF number_of_hours_worked is less than 0 or is not an number THEN
+        SET message to a string indicating number_of_hours_worked is invalid
+        SET is_valid_variable to FALSE
+    ELSE IF base_hourly_wage is less than 0 or is not a number THEN
+        SET message to a string indicating bas_hourly_wage is invalid
+        SET is_valid_variable to FALSE
+    ELSE IF overtime_hourly_wage is less than 0 or is not a number THEN
+        SET message to a string indicating overtime_hourly_wage is invalid
+        SET is_valid_variable to FALSE
     END IF
+    RETURN a namedtuple with is_valid and message as elements
 
 
-function calculateWage(number of hours worked, base hourly wage, overtime hourly wage):
-    SET the wage result to 0
-    IF the number of hours worked is greater than 40 THEN
-        ADD 40 multiplied by the base hourly wage to wage result
-        SET the number of hours worked to the number of hours worked minus 40
-        ADD the number of hours worked times the overtime hourly wage to wage result
+function calculateWage(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage):
+    SET wage_result variable to 0
+    IF number_of_hours_worked is greater than 40 THEN
+        ADD 40 multiplied by base_hourly_wage to wage_result
+        SET the number_of_hours_worked variable to number_of_hours_worked minus 40
+        ADD the number_of_hours_worked times the overtime_hourly_wage to wage_result
     ELSE
-        ADD the number of hours worked times the base hourly wage to wage result
+        ADD the number_of_hours_worked times the base_hourly_wage to wage_result
     END IF
-    RETURN wage result
+    RETURN wage_result
 
 
 function main():
-    SET the result to an empty string
-    SET the input validation result to True
-    SET number of hours worked by employee, base hourly wage, and overtime hourly wage to 0
-    GET the number of hours worked by employee, base hourly wage, and overtime hourly wage
-    SET number of hours worked by employee, base hourly wage, and overtime hourly wage
-    CALL the validateInput function, passing in the number of hours worked, base hourly wage, and overtime hourly wage
-    SET the input validation result to the  output of the valideInput function
-    IF the the input validation result is TRUE THEN
-        CALL the calculateWage function, passing in the number of hours worked, base hourly wage, and overtime hourly wage
-        SET theresult to the output of the calculageWage function
+    SET final_result variable to an empty string
+    SET validation_result variable to None
+    SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage variables to 0
+    GET the number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage from standard input
+    SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to values recieved from standard input
+    CALL the validateInput function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
+    SET the validation_result result to the output of the valideInput function
+    IF validation_result.is_valid is TRUE THEN
+        CALL the calculateWage function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
+        SET the final_result to the output of the calculageWage function
     ELSE
-        SET the result to the error message recieved from the validateInput function
+        SET the final_result to validation_result.message
     END IF
-    PRINT the result
+    PRINT the final_result
 
 
 CALL the main function
