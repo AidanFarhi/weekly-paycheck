@@ -26,11 +26,11 @@ function validateInput(number_of_hours_worked, base_hourly_wage, overtime_hourly
 function calculateWage(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage):
     INITIALIZE wage_result to zero
     IF number_of_hours_worked is greater than forty THEN
-        ADD forty multiplied by base_hourly_wage to wage_result
-        SET the number_of_hours_worked to number_of_hours_worked minus forty
-        ADD the number_of_hours_worked times the overtime_hourly_wage to wage_result
+        ADD forty times base_hourly_wage to wage_result
+        SET number_of_hours_worked to number_of_hours_worked minus forty
+        ADD number_of_hours_worked times overtime_hourly_wage to wage_result
     ELSE
-        ADD the number_of_hours_worked times the base_hourly_wage to wage_result
+        ADD number_of_hours_worked times base_hourly_wage to wage_result
     END IF
     RETURN wage_result
 
@@ -39,20 +39,20 @@ function main():
     INITIALIZE final_result to None
     INITIALIZE validation_result to None
     INITIALIZE number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to zero
-    GET the number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage from standard input
+    GET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage from standard input
     SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to values recieved from standard input
-    CALL the validateInput function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
-    SET the validation_result result to the output of the valideInput function
+    CALL validateInput function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
+    SET validation_result result to output of valideInput function
     IF validation_result.is_valid is TRUE THEN
-        CALL the calculateWage function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
-        SET the final_result to the output of the calculageWage function
+        CALL calculateWage function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
+        SET final_result to output of calculageWage function
     ELSE
-        SET the final_result to validation_result.message
+        SET final_result to validation_result.message
     END IF
-    PRINT the final_result
+    PRINT final_result
 
 
-CALL the main function
+CALL main function
 ```
 
 ## Program Flowchart
