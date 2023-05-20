@@ -29,15 +29,19 @@ function calculateWage(number of hours worked, base hourly wage, overtime hourly
 
 function main():
     SET the result to an empty string
-    GET the number of hours worked by employee, base hourly wage, and overtime hourly wage from standard input
+    SET the input validation result to True
+    SET number of hours worked by employee, base hourly wage, and overtime hourly wage to 0
+    GET the number of hours worked by employee, base hourly wage, and overtime hourly wage
+    SET number of hours worked by employee, base hourly wage, and overtime hourly wage
     CALL the validateInput function, passing in the number of hours worked, base hourly wage, and overtime hourly wage
-    IF the validateInput function returns TRUE THEN
+    SET the input validation result to the  output of the valideInput function
+    IF the the input validation result is TRUE THEN
         CALL the calculateWage function, passing in the number of hours worked, base hourly wage, and overtime hourly wage
-        SET the result to a string containing the employee's wages for the week
+        SET theresult to the output of the calculageWage function
     ELSE
         SET the result to the error message recieved from the validateInput function
     END IF
-    PRINT the result to standard output
+    PRINT the result
 
 
 CALL the main function
