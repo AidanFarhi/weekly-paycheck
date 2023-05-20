@@ -1,3 +1,9 @@
+# Problem statement
+
+A company wants a program that will calculate the weekly paycheck for an employee based on how many hours they worked. For this company, an employee earns $20 an hour for the first 40 hours that they work. The employee earns overtime, $30 an hour, for each hour they work above 40 hours.
+
+Example: If an employee works 60 hours in a week, they would earn $20/hr for the first 40 hours. Then they would earn $30/hr for the 20 hours they worked overtime. Therefore, they earned: ($20/hr * 40hrs) + ($30/hr * 20 hrs) = $800 + $600 = $1400 total.
+
 ## Pseusdocode
 
 ```
@@ -37,6 +43,6 @@ function main():
 CALL the main function
 ```
 
-## Flowchart
+## Program Flowchart
 
 ![Flow Chart](WeeklyWageFlowchart.jpeg)
