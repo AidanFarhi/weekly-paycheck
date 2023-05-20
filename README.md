@@ -8,26 +8,26 @@ Example: If an employee works 60 hours in a week, they would earn $20/hr for the
 
 ```
 function validateInput(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage):
-    SET message variable to a string indicating success
-    SET is_valid variable to TRUE
-    IF number_of_hours_worked is less than 0 or is not an number THEN
-        SET message to a string indicating number_of_hours_worked is invalid
-        SET is_valid_variable to FALSE
-    ELSE IF base_hourly_wage is less than 0 or is not a number THEN
-        SET message to a string indicating bas_hourly_wage is invalid
-        SET is_valid_variable to FALSE
-    ELSE IF overtime_hourly_wage is less than 0 or is not a number THEN
-        SET message to a string indicating overtime_hourly_wage is invalid
-        SET is_valid_variable to FALSE
+    INITIALIZE message to 'all inputs are valid'
+    INITIALIZE is_valid to TRUE
+    IF number_of_hours_worked is less than zero or is not an number THEN
+        SET message to 'number_of_hours_worked must be a non-negative integer'
+        SET is_valid to FALSE
+    ELSE IF base_hourly_wage is less than zero or is not a number THEN
+        SET message to 'base_hourly_wage must be a non-negative integer'
+        SET is_valid to FALSE
+    ELSE IF overtime_hourly_wage is less than zero or is not a number THEN
+        SET message to 'overtime_hourly_wage must be a non-negative integer'
+        SET is_valid to FALSE
     END IF
     RETURN a namedtuple with is_valid and message as elements
 
 
 function calculateWage(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage):
-    SET wage_result variable to 0
-    IF number_of_hours_worked is greater than 40 THEN
-        ADD 40 multiplied by base_hourly_wage to wage_result
-        SET the number_of_hours_worked variable to number_of_hours_worked minus 40
+    INITIALIZE wage_result to zero
+    IF number_of_hours_worked is greater than forty THEN
+        ADD forty multiplied by base_hourly_wage to wage_result
+        SET the number_of_hours_worked to number_of_hours_worked minus forty
         ADD the number_of_hours_worked times the overtime_hourly_wage to wage_result
     ELSE
         ADD the number_of_hours_worked times the base_hourly_wage to wage_result
@@ -36,9 +36,9 @@ function calculateWage(number_of_hours_worked, base_hourly_wage, overtime_hourly
 
 
 function main():
-    SET final_result variable to an empty string
-    SET validation_result variable to None
-    SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage variables to 0
+    INITIALIZE final_result to None
+    INITIALIZE validation_result to None
+    INITIALIZE number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to zero
     GET the number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage from standard input
     SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to values recieved from standard input
     CALL the validateInput function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
