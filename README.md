@@ -42,7 +42,7 @@ function main():
     GET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage from standard input
     SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to values recieved from standard input
     CALL validateInput function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
-    SET validation_result result to output of valideInput function
+    SET validation_result to output of valideInput function
     IF validation_result.is_valid is TRUE THEN
         CALL calculateWage function, passing in number_of_hours_worked, base_hourly_wage, and overtime_hourly_wage
         SET final_result to output of calculageWage function
