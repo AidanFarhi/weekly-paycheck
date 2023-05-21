@@ -10,7 +10,7 @@ Example: If an employee works 60 hours in a week, they would earn $20/hr for the
 function validateInput(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage):
     INITIALIZE message to None
     INITIALIZE is_valid to TRUE
-    IF number_of_hours_worked is less than zero or number_of_hours_worked is not an number THEN
+    IF number_of_hours_worked is less than zero or number_of_hours_worked is not a number THEN
         SET message to 'number_of_hours_worked must be a non-negative integer'
         SET is_valid to FALSE
     ELSE IF base_hourly_wage is less than zero or base_hourly_wage is not a number THEN
