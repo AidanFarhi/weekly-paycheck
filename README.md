@@ -39,7 +39,7 @@ function main():
     INITIALIZE final_result and validation_result to None
     INITIALIZE number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to zero
     GET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage from standard input
-    SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to values recieved from standard input
+    SET number_of_hours_worked_by_employee, base_hourly_wage, and overtime_hourly_wage to values received from standard input
     CALL validateInput(number_of_hours_worked, base_hourly_wage, overtime_hourly_wage)
     SET validation_result to output of valideInput
     IF validation_result.is_valid is TRUE THEN
